@@ -3,19 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff; /* Light Mode Hintergrund */
+    --foreground: #000000; /* Light Mode Textfarbe */
   }
+  
+  .dark {
+    --background: #121212; /* Dark Mode Hintergrund */
+    --foreground: #ffffff; /* Dark Mode Textfarbe */
+  }
+
+  /* Globale Scrollbar für die gesamte Seite */
+::-webkit-scrollbar {
+  width: 8px; /* Dünn und modern */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hintergrund der Scrollbar */
+::-webkit-scrollbar-track {
+  background: #1f1f1f; /* Passend zum Dark Theme */
+}
+
+/* Der Scrollbar-Griff */
+::-webkit-scrollbar-thumb {
+  background: #444; /* Dunkler Griff */
+  border-radius: 6px; /* Leicht abgerundet */
+}
+
+/* Beim Hover heller machen */
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+html {
+  scroll-behavior: smooth;
 }

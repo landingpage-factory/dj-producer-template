@@ -1,4 +1,4 @@
-import About from "./components/about";
+import Bio from "./components/bio";
 import HomeIntro from "./components/home";
 import Music from "./components/music";
 import Events from "./components/events";
@@ -15,8 +15,8 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about">
-          <About />
+        <section id="bio">
+          <Bio />
         </section>
 
         {/* Music Section */}

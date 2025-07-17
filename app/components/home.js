@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function HomeIntro() {
   useEffect(() => {
@@ -15,12 +16,20 @@ export default function HomeIntro() {
   }, []);
 
   return (
-    <div
-      className="relative w-full h-screen bg-cover bg-center flex items-center justify-center px-4"
-      style={{ backgroundImage: "url('/images/home-hero.jpg')" }}
-    >
+    <div className="relative w-full h-screen flex items-center justify-center px-4">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+        Dein Browser unterstützt das Videoformat nicht.
+      </video>
+
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-75"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-80"></div>
 
       {/* Content mit AOS-Animation */}
       <div className="relative z-10 text-center">
@@ -37,18 +46,20 @@ export default function HomeIntro() {
         >
           Erlebe meine Musik und Events mit einzigartigem Stil.
         </p>
-        {/* Call-to-Action Button */}
-<a
-  href="#about"
-  className="mt-6 inline-block px-6 py-3 text-lg font-semibold text-white transition-all duration-300 rounded
-  bg-[rgba(57,255,20,0.8)] shadow-[0_0_15px_#39ff14] hover:bg-[rgba(57,255,20,1)] 
-  hover:shadow-[0_0_25px_#39ff14] hover:text-black"
-  data-aos="fade-up"
-  data-aos-delay="500"
->
-  About Me
-</a>
-
+        {/* Call-to-Action Button mit react-scroll */}
+        <ScrollLink
+          to="bio" // Referenz zum "About"-Bereich auf der Seite
+          smooth={true}
+          duration={500}
+          offset={-70} // Stellt sicher, dass der Bereich richtig positioniert ist
+          className="mt-6 inline-block px-6 py-3 text-lg font-semibold text-white transition-all duration-300
+          bg-[rgba(57,255,20,0.8)] shadow-[0_0_15px_#39ff14] hover:bg-[rgba(57,255,20,1)] 
+          hover:shadow-[0_0_25px_#39ff14] hover:text-black hover:cursor-pointer"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          About Me
+        </ScrollLink>
       </div>
     </div>
   );

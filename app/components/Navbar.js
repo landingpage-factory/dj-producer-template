@@ -73,7 +73,7 @@ const Navbar = () => {
         <ul className={`${styles.links} ${isMobileMenuOpen ? styles.open : ''}`}>
   {[
     { to: 'home', icon: <FaHome />, text: 'Home' },
-    { to: 'about', icon: <FaUser />, text: 'About' },
+    { to: 'bio', icon: <FaUser />, text: 'About' },
     { to: 'music', icon: <FaMusic />, text: 'Music' },
     { to: 'events', icon: <FaCalendarAlt />, text: 'Events' },
     { to: 'contact', icon: <FaEnvelope />, text: 'Contact' }

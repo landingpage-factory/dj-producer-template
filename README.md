@@ -76,7 +76,6 @@ Für kommerzielle Nutzung kontaktiere bitte den Autor.
 
 - **[Next.js](https://nextjs.org/)** für das großartige Framework.
 - **[Tailwind CSS](https://tailwindcss.com/)** für das flexible Styling.
-- **[Framer Motion](https://www.framer.com/motion/)** für die Animationen.
 - **[AOS](https://michalsnik.github.io/aos/)** für die Animationen.
 - **[React Icons](https://react-icons.github.io/react-icons/)** für die einfache Icon-Integration.
 
